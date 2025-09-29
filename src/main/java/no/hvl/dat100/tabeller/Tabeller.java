@@ -40,9 +40,11 @@ public class Tabeller {
 	// d)
 	public static boolean finnesTall(int[] tabell, int tall) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden finnesTall ikke implementert");
-
+        if (tabell == null) return false;
+        for (int value : tabell) {
+            if (value == tall) return true;
+        }
+        return false;
 	}
 
 	// e)
@@ -62,8 +64,9 @@ public class Tabeller {
 	// g)
 	public static boolean erSortert(int[] tabell) {
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden erSortert ikke implementert");
+
+// TODO
+        throw new UnsupportedOperationException("Metoden reverser ikke implementert");
 	}
 
 	// h)
