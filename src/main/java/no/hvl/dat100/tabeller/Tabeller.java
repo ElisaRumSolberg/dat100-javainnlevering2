@@ -2,7 +2,7 @@ package no.hvl.dat100.tabeller;
 
 public class Tabeller {
 
-	// a)
+	// a) Elisa
 	public static void skrivUt(int[] tabell) {
 
         if (tabell == null) return;
@@ -13,7 +13,7 @@ public class Tabeller {
         System.out.println();
 	}
 
-	// b)
+	// b) Alissa
 	public static String tilStreng(int[] tabell) {
         StringBuilder sb = new StringBuilder();
         sb.append("[");
@@ -30,14 +30,14 @@ public class Tabeller {
 		//throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
 	}
 
-	// c)
+	// c) Samsam
 	public static int summer(int[] tabell) {
 
 		// TODO
 		throw new UnsupportedOperationException("Metoden summer ikke implementert");
 	}
 
-	// d)
+	// d) Elisa
 	public static boolean finnesTall(int[] tabell, int tall) {
 
         if (tabell == null) return false;
@@ -47,29 +47,33 @@ public class Tabeller {
         return false;
 	}
 
-	// e)
+	// e) Alissa
 	public static int posisjonTall(int[] tabell, int tall) {
 
 		// TODO
 		throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
 	}
 
-	// f)
+	// f) Samsam
 	public static int[] reverser(int[] tabell) {
 
 		// TODO
 		throw new UnsupportedOperationException("Metoden reverser ikke implementert");
 	}
 
-	// g)
+	// g) Elisa
 	public static boolean erSortert(int[] tabell) {
+        if (tabell == null || tabell.length < 2) return true;
+        for (int i = 1; i < tabell.length; i++) {
+            if (tabell[i] < tabell[i - 1])
+                return false;
+        }
+        return true;
 
 
-// TODO
-        throw new UnsupportedOperationException("Metoden reverser ikke implementert");
 	}
 
-	// h)
+	// h) Alissa
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
 
 		// TODO
