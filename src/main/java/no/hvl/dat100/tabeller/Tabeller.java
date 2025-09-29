@@ -15,9 +15,19 @@ public class Tabeller {
 
 	// b)
 	public static String tilStreng(int[] tabell) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("[");
+        for (int i = 0; i < tabell.length; i++) {
+            sb.append(tabell[i]);
+            if (i<tabell.length-1){
+                sb.append(",");
+            }
+        }
+        sb.append("]");
+        return sb.toString();
 
 		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
+		//throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
 	}
 
 	// c)
