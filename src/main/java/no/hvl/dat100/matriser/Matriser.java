@@ -58,7 +58,7 @@ System.out.println();
 	
 	// e) Elisa
 	public static int[][] speile(int[][] matrise) {
-        if (matrise == null) return null;          // opsiyonel: null ise null döndür
+        if (matrise == null) return null;
         if (matrise.length == 0) return new int[0][0];
 
         int r = matrise.length;
