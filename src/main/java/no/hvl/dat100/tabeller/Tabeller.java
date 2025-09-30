@@ -49,9 +49,15 @@ public class Tabeller {
 
 	// e) Alissa
 	public static int posisjonTall(int[] tabell, int tall) {
+        for(int i = 0; i < tabell.length; i++){
+            if (tabell[i] == tall) {
+                return i;
+            }
+        }
+        return -1;
 
 		// TODO
-		throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
+		//throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
 	}
 
 	// f) Samsam
@@ -75,9 +81,19 @@ public class Tabeller {
 
 	// h) Alissa
 	public static int[] settSammen(int[] tabell1, int[] tabell2) {
+        int n1=tabell1.length;
+        int n2=tabell2.length;
+        int[] out = new int[n1+n2];
+        for(int i=0;i<n1;i++){
+            out[i]=tabell1[i];
+        }
+        for(int j=0;j<n2;j++){
+            out[n1+j]=tabell2[j];
+        }
+        return out;
 
 		// TODO
-		throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
+		//throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
 
 	}
 }
