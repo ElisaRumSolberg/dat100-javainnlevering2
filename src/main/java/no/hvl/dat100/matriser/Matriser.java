@@ -37,9 +37,19 @@ System.out.println();
 
 	// c) Alissa
 	public static int[][] skaler(int tall, int[][] matrise) {
-		
-		// TODO
-		throw new UnsupportedOperationException("Metoden skaler ikke implementert");
+        if(matrise==null) return null;
+        int rows = matrise.length;
+        if(rows==0) return new int[0][0];
+
+        int cols = matrise[0].length;
+        int[][] res = new int[rows][cols];
+
+        for(int i=0;i<rows;i++) {
+            for(int j=0;j<cols;j++) {
+                res[i][j] = matrise[i][j]*tall;
+            }
+        }
+        return res;
 	
 	}
 
@@ -79,9 +89,29 @@ System.out.println();
 
 	// f) Alissa
 	public static int[][] multipliser(int[][] a, int[][] b) {
+        if (a == null || b == null) throw new IllegalArgumentException(("Matriser kan ikke være null"));
+        int r  = a.length;
+        int k  =(r==0) ? 0 : a[0].length;
+        int k2 =b.length;
+        int c  =(k2==0) ? 0 : b[0].length;
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden multipliser ikke implementert");
+        if(k!=k2){
+            throw new IllegalArgumentException(("Uforenlige størrelse: a.kolonner ("+k+") !=b.rader("+k2+")"));
+        }
+
+        int[][] res = new int[r][c];
+
+        for (int i = 0; i < r; i++) {
+            for (int j = 0; j < c; j++) {
+                int sum = 0;
+                for (int t = 0; t < k; t++) {
+                    sum += a[i][t]*b[t][j];
+                }
+                res[i][j]=sum;
+            }
+        }
+        return res;
+
 	
 	}
 }
