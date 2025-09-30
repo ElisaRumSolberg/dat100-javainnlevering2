@@ -26,8 +26,6 @@ public class Tabeller {
         sb.append("]");
         return sb.toString();
 
-		// TODO
-		//throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
 	}
 
 	// c) Samsam
@@ -60,8 +58,7 @@ public class Tabeller {
         }
         return -1;
 
-		// TODO
-		//throw new UnsupportedOperationException("Metoden posisjonTall ikke implementert");
+
 	}
 
 	// f) Samsam
@@ -100,8 +97,6 @@ public class Tabeller {
         }
         return out;
 
-		// TODO
-		//throw new UnsupportedOperationException("Metoden settSammen ikke implementert");
 
 	}
 }
