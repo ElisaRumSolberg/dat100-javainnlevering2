@@ -65,11 +65,15 @@ public class Tabeller {
 	}
 
 	// f) Samsam
-	public static int[] reverser(int[] tabell) {
-
-		// TODO
-		throw new UnsupportedOperationException("Metoden reverser ikke implementert");
-	}
+    public static int[] reverser(int [] tabell) {
+        if (tabell == null) return null;
+        int n =tabell.length;
+        int[] rev = new int[n];
+        for ( int i= 0; i<n; i++){
+            rev[i]=tabell[n-1-i];
+        }
+        return rev;
+    }
 
 	// g) Elisa
 	public static boolean erSortert(int[] tabell) {
