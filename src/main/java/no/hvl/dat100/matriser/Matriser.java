@@ -11,10 +11,25 @@ public class Matriser {
 
 	// b Elisa
 	public static String tilStreng(int[][] matrise) {
+        StringBuilder sb = new StringBuilder();
 
-		// TODO
-		throw new UnsupportedOperationException("Metoden tilStreng ikke implementert");
-		
+        for (int i = 0; i < matrise.length; i++) {
+            int[] row = matrise[i];
+
+            if (row == null) {
+                sb.append("\n");
+                continue;
+            }
+
+
+            for (int j = 0; j < row.length; j++) {
+                sb.append(row[j]).append(" ");
+            }
+            sb.append("\n");
+        }
+
+        return sb.toString();
+
 	}
 
 	// c) Alissa
@@ -35,10 +50,22 @@ public class Matriser {
 	
 	// e) Elisa
 	public static int[][] speile(int[][] matrise) {
+        if (matrise == null) return null;          // opsiyonel: null ise null döndür
+        if (matrise.length == 0) return new int[0][0];
 
-		// TODO
+        int r = matrise.length;
+        int c = matrise[0].length;
 
-		throw new UnsupportedOperationException("Metoden speile ikke implementert");
+        int[][] res = new int[c][r];
+
+        for (int i = 0; i < r; i++) {
+
+            for (int j = 0; j < c; j++) {
+                res[j][i] = matrise[i][j];          // (i,j) -> (j,i)
+            }
+        }
+        return res;
+
 	
 	}
 
